@@ -3,7 +3,7 @@ package ru.te4nick.mycompetes;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private ImageView logoutImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_login ,R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_login ,R.id.nav_home, R.id.nav_browser, R.id.nav_competitions)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
